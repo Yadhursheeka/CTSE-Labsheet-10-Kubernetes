@@ -1,7 +1,7 @@
 name: Docker Build Deploy
 on:
   push:
-    branches: [master]
+    branches: [main]
 
 jobs:
   build:
@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: run shell script
-        run: echo commit hash is ${{ steps.vars.outputs.branch }}
+        run: echo commit hash is ${{ github.sha }}
       - name: Build the Docker image
-        run: docker build . --file Dockerfile --tag my-image-name:${{ steps.vars.outputs.branch }}
+        run: docker build . --file Dockerfile --tag my-image-name:${{ github.sha }}
