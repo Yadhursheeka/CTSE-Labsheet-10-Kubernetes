@@ -25,7 +25,7 @@ spec:
         app: test-ctse-lab-10-2022
     spec:
       containers:
-        - image: it19186948/ctse-lab-10-2022:a756d25d9ae6db9b626011505f5e80f3139e4124
+        - image: it19186948/ctse-lab-10-2022:{{tag}}
           imagePullPolicy: Always
           name: ctse-lab-10-2022
           resources: {}
