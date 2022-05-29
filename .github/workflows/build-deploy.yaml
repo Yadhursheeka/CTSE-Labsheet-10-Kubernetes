@@ -25,4 +25,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/CTSE-lab-10-2022:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/ctse-lab-10-2022:${{ github.sha }}
